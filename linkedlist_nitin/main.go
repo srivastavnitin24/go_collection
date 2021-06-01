@@ -84,7 +84,7 @@ func (ll *LinkedList) insertAt(pos, key int) {
 		ll.len++
 		return
 	}
-	n := ll.getNodeAt(pos)
+	n := ll.getNodeAt(pos) // 1 2 3 4
 	newNode.next = n
 	prev := ll.getNodeAt(pos - 1)
 	prev.next = newNode
