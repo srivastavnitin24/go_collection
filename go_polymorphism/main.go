@@ -13,7 +13,7 @@ type employee interface {
 // Structure 1
 type team1 struct {
 	totalapp_1 int
-	name_1	 string
+	name_1     string
 }
 
 // Methods of employee interface are
@@ -29,7 +29,7 @@ func (t1 team1) name() string {
 // Structure 2
 type team2 struct {
 	totalapp_2 int
-	name_2	 string
+	name_2     string
 }
 
 // Methods of employee interface are

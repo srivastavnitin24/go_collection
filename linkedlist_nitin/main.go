@@ -84,7 +84,7 @@ func (ll *LinkedList) insertAt(pos, key int) {
 		ll.len++
 		return
 	}
-	n := ll.getNodeAt(pos) // 1 2 3 4
+	n := ll.getNodeAt(pos)
 	newNode.next = n
 	prev := ll.getNodeAt(pos - 1)
 	prev.next = newNode
@@ -161,4 +161,17 @@ func (ll *LinkedList) search(key int) {
 	} else {
 		fmt.Println("Linklist is empty cannot search")
 	}
+}
+
+//find middle node in one iteration
+func (ll LinkedList) findMiddleNode() {
+	ptr := ll.head
+	slowptr := ptr
+	fastptr := ptr
+	for fastptr != nil && fastptr.next != nil {
+		fastptr = fastptr.next.next
+		slowptr = slowptr.next
+		fmt.Println("11111111111111  ", fastptr.val, ":", slowptr.val)
+	}
+	fmt.Println("************* :", fastptr.val, ":", slowptr.val)
 }

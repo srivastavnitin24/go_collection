@@ -6,7 +6,7 @@ func SumOfSquares(c, quit chan int) {
 	y := 1
 	for {
 		select {
-		case c <- (y * y):
+		case c <- y * y:
 			y++
 		case <-quit:
 			return

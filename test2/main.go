@@ -138,25 +138,26 @@
 //}
 
 //====================================================================================
-
+//find the count of words in the string
 package main
 
 import (
 	"fmt"
-	"go_collection/builderPattern"
-	"sort"
+	"strings"
 )
 
 func main() {
-	var m map[int]string
-	var keys []int
-	for k := range m {
-		keys = append(keys, k)
+	str := "This is great and nitin is great"
+	strArr := strings.Split(str, " ")
+	m := map[string]int{}
+	for _, s := range strArr {
+		if _, ok := m[s]; ok {
+			m[s] = m[s] + 1
+		} else {
+			m[s] = 1
+		}
 	}
-	sort.Ints(keys)
-	for _, k := range keys {
-		fmt.Println("Key:", k, "Value:", m[k])
-	}
-	builderPattern.RunBuilderFacet()
+
+	fmt.Println(m)
 
 }
