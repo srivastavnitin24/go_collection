@@ -51,7 +51,7 @@ func (ll *Linkedlist) printll() {
 	}
 }
 
-//Remove duplicate nodes in an unsorted linked list?
+// Remove duplicate nodes in an unsorted linked list?
 func (ll *Linkedlist) insert(key int) {
 	newNode := &Node{}
 	newNode.val = key
